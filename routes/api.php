@@ -19,6 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::post('/stream/on_publish', 'LiveStreamController@on_publish');
+Route::post('/stream/on_publish', [\App\Http\Controllers\LiveStreamController::class, 'on_publish']);
 
 
